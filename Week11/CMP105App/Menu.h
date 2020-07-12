@@ -4,15 +4,14 @@
 #include "Framework/Input.h"
 #include "Framework/AudioManager.h"
 #include "Framework/GameState.h"
-#include "Player.h"
 #include <string>
 #include <iostream>
 
 
-class Level{
+class Menu {
 public:
-	Level(sf::RenderWindow* hwnd, Input* in, GameState* gs, AudioManager* aud);
-	~Level();
+	Menu(sf::RenderWindow* hwnd, Input* in, GameState* gs, AudioManager* aud);
+	~Menu();
 
 	void handleInput(float dt);
 	void update(float dt);
@@ -29,9 +28,7 @@ private:
 	GameState* gameState;
 	AudioManager* audio;
 
-	// Level Objects
+	// Menu Objects
 	sf::Font font;
 	sf::Text text;
-
-	Player player;
 };
